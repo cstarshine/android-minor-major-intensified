@@ -2,6 +2,8 @@ package com.jin.todo2;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,6 +21,23 @@ public class MainActivity extends AppCompatActivity {
 
         final TextView textcount = (TextView)findViewById(R.id.text_view);
         final EditText editText = (EditText)findViewById(R.id.edit_text);
+
+        editText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                textcount.setText("0");
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                textcount.setText(String.valueOf(editText.length()));
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
 
         count.setOnClickListener(new View.OnClickListener() {
             @Override
