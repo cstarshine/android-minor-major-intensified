@@ -24,18 +24,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        studentList.add(new student("홍길동","13"));
-        studentList.add(new student("짱구","14"));
-        studentList.add(new student("철수","15"));
-        studentList.add(new student("유리","16"));
-        studentList.add(new student("태준","17"));
-        studentList.add(new student("정우","18"));
-        studentList.add(new student("미어캣","19"));
-        studentList.add(new student("호랑이","20"));
-        studentList.add(new student("은표","21"));
-        studentList.add(new student("짱아","22"));
-        studentList.add(new student("코난","23"));
-        studentList.add(new student("최도이","24"));
+        studentList.add(new student("홍길동",13));
+        studentList.add(new student("짱구",14));
+        studentList.add(new student("철수",15));
+        studentList.add(new student("유리",16));
+        studentList.add(new student("태준",17));
+        studentList.add(new student("정우",18));
+        studentList.add(new student("미어캣",19));
+        studentList.add(new student("호랑이",20));
+        studentList.add(new student("은표",21));
+        studentList.add(new student("짱아",22));
+        studentList.add(new student("코난",23));
+        studentList.add(new student("최도이",24));
 
         gridView = (GridView)findViewById(R.id.grid);
         CustomAdapter adapter = new CustomAdapter(studentList);

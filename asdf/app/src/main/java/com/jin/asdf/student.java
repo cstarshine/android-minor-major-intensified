@@ -5,19 +5,19 @@ package com.jin.asdf;
  */
 
 public class student {
-    String[] name;
+    String name;
     long id;
 
-    public student(String[] name, long id) {
+    public student(String name, long id) {
         this.name = name;
         this.id = id;
     }
 
-    public String[] getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(String[] name) {
+    public void setName(String name) {
         this.name = name;
     }
 
