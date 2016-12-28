@@ -6,14 +6,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 public class MainActivity extends AppCompatActivity {
+
+    Spinner year, month, date;
+
+    Object yearSt, monthSt, daySt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
         final EditText edyear = (EditText)findViewById(R.id.year);
         final EditText edmonth = (EditText)findViewById(R.id.month);

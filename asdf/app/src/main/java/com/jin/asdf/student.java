@@ -5,12 +5,22 @@ package com.jin.asdf;
  */
 
 public class student {
+    boolean isLeft;
     String name;
     long id;
 
-    public student(String name, long id) {
+    public student(boolean isLeft, String name, long id) {
+        this.isLeft = isLeft;
         this.name = name;
         this.id = id;
+    }
+
+    public boolean isLeft() {
+        return isLeft;
+    }
+
+    public void setLeft(boolean left) {
+        isLeft = left;
     }
 
     public String getName() {

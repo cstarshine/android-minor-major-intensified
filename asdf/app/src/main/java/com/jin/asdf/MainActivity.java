@@ -24,34 +24,34 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        studentList.add(new student("홍길동",13));
-        studentList.add(new student("짱구",14));
-        studentList.add(new student("철수",15));
-        studentList.add(new student("유리",16));
-        studentList.add(new student("태준",17));
-        studentList.add(new student("정우",18));
-        studentList.add(new student("미어캣",19));
-        studentList.add(new student("호랑이",20));
-        studentList.add(new student("은표",21));
-        studentList.add(new student("짱아",22));
-        studentList.add(new student("코난",23));
-        studentList.add(new student("최도이",24));
+        studentList.add(new student(true,"홍길동",13));
+        studentList.add(new student(true,"짱구",14));
+        studentList.add(new student(false,"철수",15));
+        studentList.add(new student(false,"유리",16));
+        studentList.add(new student(true,"태준",17));
+        studentList.add(new student(false,"정우",18));
+        studentList.add(new student(true,"미어캣",19));
+        studentList.add(new student(false,"호랑이",20));
+        studentList.add(new student(true,"은표",21));
+        studentList.add(new student(false,"짱아",22));
+        studentList.add(new student(true,"코난",23));
+        studentList.add(new student(false,"최도이",24));
 
-        gridView = (GridView)findViewById(R.id.grid);
+        listView = (ListView) findViewById(R.id.list);
         CustomAdapter adapter = new CustomAdapter(studentList);
-        gridView.setAdapter(adapter);
+        listView.setAdapter(adapter);
 
         //listView = (ListView)findViewById(R.id.list);
         //ArrayAdapter adapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,ITEMS);
         //listView.setAdapter(adapter);
 
-        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if (position == 0) {
-                    //Toast.makeText(getApplicationContext(), ITEMS[position], Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
+//        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                if (position == 0) {
+//                    //Toast.makeText(getApplicationContext(), ITEMS[position], Toast.LENGTH_SHORT).show();
+//                }
+//            }
+//        });
     }
 }

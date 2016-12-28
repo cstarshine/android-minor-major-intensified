@@ -21,7 +21,7 @@ public class Main2Activity extends AppCompatActivity {
         Integer day = getIntent().getIntExtra("day",0);
 
         if(month>12 || month<0 || month>12 || month<1 || day>32 || day<1){
-            Toast.makeText(MainActivity.this,"오류발생",Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity,"오류발생",Toast.LENGTH_SHORT).show();
         }
         else {
             year = year % 10;
